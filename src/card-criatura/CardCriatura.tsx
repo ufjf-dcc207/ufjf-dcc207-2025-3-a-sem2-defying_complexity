@@ -1,13 +1,18 @@
 import "./CardCriatura.css"
+import type { CardCriaturaType } from "../App";
 
-export default function CardCriatura(){
+type CardCriaturaProps = {
+    criatura: CardCriaturaType;
+}
+
+export default function CardCriatura({ criatura }: CardCriaturaProps){
     return(
         <div className="card-container">
-            <img className="card-imagem" src="https://i0.wp.com/newronio.wpengine.com/wp-content/uploads/2019/03/medusa1.jpg?resize=640%2C670&ssl=1" alt="imagem"></img>
-            <h3>Nome do bicho</h3>
-            <p>periculosidade</p>
-            <p>descricao</p>
-            <small>mitologia</small>
+            <img className="card-imagem" src={`../../public/imgs/${criatura.imagem}`} alt="imagem"></img>
+            <h3>{criatura.nome}</h3>
+            <p>Periculosidade: {criatura.periculosidade}</p>
+            <p className="descricao-criatura">{criatura.descricao}</p>
+            <p className="mitologia-criatura">Mitologia: {criatura.mitologia}</p>
         </div>
     )
 }

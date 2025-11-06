@@ -1,11 +1,86 @@
-[
-    {
-        "nome":"Medusa",
-        "imagem":"srceda",
-        "cor_principal":"green",
-        "cor_secundaria":"black",
-        "descricao":"perdaasdasd",
-        "periculosidade":12,
-        "mitologia":"grega"  
-    }
-]
+{
+    "titulo": "Bestiário",
+    "subtitulo": "A melhor enciclopédia de criaturas lendárias e fantásticas.",
+    "criaturas": [
+        {
+            "nome": "Medusa",
+            "imagem": "medusa.png",
+            "descricao": "Criatura mitológica com cabelos de serpentes. Seu olhar transforma qualquer um em pedra. Mortal e temida por heróis.",
+            "periculosidade": 95,
+            "mitologia": "grega",
+            "fonte_img": "https://www.flaticon.com/br/icones-gratis/sereia"
+        },
+        {
+            "nome": "Goblin",
+            "imagem": "goblin.png",
+            "descricao": "Pequena criatura verde e astuta. Vive em cavernas e cavernas. Gosta de roubar e acumular tesouro.",
+            "periculosidade": 40,
+            "mitologia": "germânica",
+            "fonte_img": "https://www.flaticon.com/br/icones-gratis/goblin"
+        },
+        {
+            "nome": "Sereia",
+            "imagem": "sereia.png",
+            "descricao": "Criatura aquática com corpo feminino e cauda de peixe. Seu canto hipnotiza os marinheiros.",
+            "periculosidade": 70,
+            "mitologia": "vária",
+            "fonte_img": "https://www.flaticon.com/br/icones-gratis/sereia"
+        },
+        {
+            "nome": "Ogro",
+            "imagem": "ogro.png",
+            "descricao": "Guerreiro poderoso e selvagem. Inteligência limitada mas força brutalmente superior. Excelente em combate.",
+            "periculosidade": 85,
+            "mitologia": "fantasia",
+            "fonte_img": "https://www.flaticon.com/br/icones-gratis/ogro"
+        },
+        {
+            "nome": "Ciclope",
+            "imagem": "ciclope.png",
+            "descricao": "Gigante com apenas um olho no centro da testa. Força descomunal e temperamento violento. Habitante de ilhas remotas.",
+            "periculosidade": 90,
+            "mitologia": "grega",
+            "fonte_img": "https://www.flaticon.com/br/icones-gratis/ciclope"
+        },
+        {
+            "nome": "Fada",
+            "imagem": "fadas.png",
+            "descricao": "Criatura mágica diminuta com asas delicadas. Vive em florestas encantadas. Pode ser benévola ou travessa.",
+            "periculosidade": 15,
+            "mitologia": "celta",
+            "fonte_img": "https://www.flaticon.com/br/icones-gratis/fadas"
+        },
+        {
+            "nome": "Pégaso",
+            "imagem": "pegaso.png",
+            "descricao": "Cavalo mitológico alado. Símbolo de beleza e liberdade. Rápido e ágil nos céus. Geralmente benevolente.",
+            "periculosidade": 30,
+            "mitologia": "grega",
+            "fonte_img": "https://www.flaticon.com/br/icones-gratis/pegaso"
+        },
+        {
+            "nome": "Vampiro",
+            "imagem": "dracula.png",
+            "descricao": "Morto-vivo que se alimenta de sangue. Imortal e extremamente perigoso. Ativo à noite, fraco durante o dia.",
+            "periculosidade": 100,
+            "mitologia": "europeia",
+            "fonte_img": "https://www.flaticon.com/br/icones-gratis/dracula"
+        },
+        {
+            "nome": "Gnomo",
+            "imagem": "gnomo.png",
+            "descricao": "Pequena criatura subterrânea. Mestre em engenharia e magia. Protetor de tesouro e ouro. Amigável com quem respeita.",
+            "periculosidade": 20,
+            "mitologia": "germânica",
+            "fonte_img": "https://www.flaticon.com/br/icones-gratis/gnomo"
+        },
+        {
+            "nome": "Unicórnio",
+            "imagem": "unicornio.png",
+            "descricao": "Cavalo lendário com um chifre espiral na testa. Símbolo de magia e pureza. Criatura rara e mágica.",
+            "periculosidade": 10,
+            "mitologia": "várias",
+            "fonte_img": "https://www.flaticon.com/br/icones-gratis/unicornio"
+        }
+    ]
+}

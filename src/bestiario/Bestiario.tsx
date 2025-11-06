@@ -1,19 +1,30 @@
 import CardCriatura from "../card-criatura/CardCriatura"
 import "./Bestiario.css"
-export default function Bestiario(){
-    return(
+import type { BestiarioType } from "../App";
+
+export type BestiarioProps = {
+    dados: BestiarioType;
+}
+
+export default function Bestiario({ dados }: BestiarioProps) {
+    return (
         <div className="bestiario-container">
             <div className="header-container">
                 <div className="gliphos">
                     sadasdasdgasnaslkdjhasdkhasdkjhaslkdhaskldhkashdklahsdklashdklajkhagsakdjgaskjdgaskdaskjdgsajkhdsakjhkjsghdkjhagsdkjgaskdjhgaskjdhgajdgajkdgajkdgajkdgkjhlahwhdljkasdsaasdasasdasasddkljnkbb35jkbkbsajdbklajuwdbkljsabdiuwabdikbs
                 </div>
                 <div className="titulo-header">
-                    <h1>Bestiário</h1>
-                    <p>A melhor enciclopédia de criaturas lendárias e fantásticas</p>
+                    <h1>{dados.titulo}</h1>
+                    <p>{dados.subtitulo}</p>
                 </div>
             </div>
             <div className="cards-container">
-                <CardCriatura />
+                {dados.criaturas.map((criatura) => (
+                    <CardCriatura
+                        key={criatura.nome}
+                        criatura={criatura}
+                    />
+                ))}
             </div>
         </div>
     )
