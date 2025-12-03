@@ -23,9 +23,10 @@ Bestiário - Cores
 .bestiario-container {
     display: flex;
     width: 100vw;
-    height: 100vh;
+    height: auto;
     flex-direction: column;
     align-items: center;
+    background-color: #282828;
 }
 
 .header-container {
@@ -44,10 +45,18 @@ Bestiário - Cores
     gap: 20px;
     padding: 20px;
     overflow-y: auto;
-    height: calc(100vh - 150px);
+    height: auto;
+    max-width: 80vw;
 }
 
-.gliphos{
+.main-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100vw;
+}
+
+.gliphos {
     display: flex;
     color: #4a5242fe;
     font-family: 'gliphos-font';
@@ -69,8 +78,4 @@ Bestiário - Cores
     color: #bcd9a2;
     font-size: 1.5rem;
     margin: 10px 0px;
-}
-
-.bestiario-container{
-    background-color: #282828;
 }

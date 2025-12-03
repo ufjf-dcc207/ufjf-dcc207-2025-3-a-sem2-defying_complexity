@@ -8,7 +8,7 @@ type CardCriaturaProps = {
 export default function CardCriatura({ criatura }: CardCriaturaProps){
     return(
         <div className="card-container">
-            <img className="card-imagem" src={`../../public/imgs/${criatura.imagem}`} alt="imagem"></img>
+            <img className="card-imagem" src={`/imgs/${criatura.imagem}`} alt="imagem"></img>
             <h3>{criatura.nome}</h3>
             <p>Periculosidade: {criatura.periculosidade}</p>
             <p className="descricao-criatura">{criatura.descricao}</p>

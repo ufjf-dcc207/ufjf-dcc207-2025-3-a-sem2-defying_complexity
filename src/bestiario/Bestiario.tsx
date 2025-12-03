@@ -1,10 +1,18 @@
 import CardCriatura from "../card-criatura/CardCriatura"
 import "./Bestiario.css"
 import type { BestiarioType } from "../App";
+import Filtro from "../filtro/Filtro";
+import { useState } from "react";
 
 export type BestiarioProps = {
     dados: BestiarioType;
 }
+
+const [filtros, setFiltros] = useState({
+    periculosidade: [],
+    mitologia: [],
+    pesquisa_texto: []
+})
 
 export default function Bestiario({ dados }: BestiarioProps) {
     return (
@@ -18,14 +26,18 @@ export default function Bestiario({ dados }: BestiarioProps) {
                     <p>{dados.subtitulo}</p>
                 </div>
             </div>
-            <div className="cards-container">
-                {dados.criaturas.map((criatura) => (
-                    <CardCriatura
-                        key={criatura.nome}
-                        criatura={criatura}
-                    />
-                ))}
+            <div className="main-container">
+                <Filtro filtros setFiltros/>
+                <div className="cards-container">
+                    {dados.criaturas.map((criatura) => (
+                        <CardCriatura
+                            key={criatura.nome}
+                            criatura={criatura}
+                        />
+                    ))}
+                </div>
             </div>
+
         </div>
     )
 }
