@@ -22,9 +22,6 @@ export type CardCriaturaType = {
 const data = json as BestiarioType;
 
 export default function App() {
-
-
-
   return (
     <>
       <Bestiario dados={data} />

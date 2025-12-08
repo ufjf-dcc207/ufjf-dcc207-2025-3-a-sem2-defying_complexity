@@ -8,13 +8,57 @@ export type BestiarioProps = {
     dados: BestiarioType;
 }
 
-const [filtros, setFiltros] = useState({
-    periculosidade: [],
-    mitologia: [],
-    pesquisa_texto: []
-})
-
 export default function Bestiario({ dados }: BestiarioProps) {
+    const [filtros, setFiltros] = useState<{ // definição do tipo dos filtros
+        ordemacao: string;
+        periculosidade: number;
+        mitologia: string[];
+        pesquisa_texto: string;
+    }>({ // estado inicial dos filtros
+        ordemacao: "nome",
+        periculosidade: 100,
+        mitologia: [],
+        pesquisa_texto: ""
+    })
+
+    const criaturasFiltradas = dados.criaturas.filter((criatura) => {
+        if (filtros.mitologia.length > 0) {
+            if (!filtros.mitologia.includes(criatura.mitologia)) {
+                return false;
+            }
+        }
+
+        if (filtros.pesquisa_texto.length > 0) {
+            const texto = filtros.pesquisa_texto.toLowerCase();
+            const textoLower = criatura.nome.toLowerCase();
+            const descricaoLower = criatura.descricao.toLowerCase();
+            if (!textoLower.includes(texto) && !descricaoLower.includes(texto)) {
+                return false;
+            }
+        }
+
+        if (filtros.periculosidade < 100) {
+            const periculosidadeNum = Number(criatura.periculosidade);
+            const percNum = Number(filtros.periculosidade);
+            if (periculosidadeNum > percNum) {
+                return false;
+            }
+        }
+
+        return true;
+    }).sort((a, b) => {
+        if (filtros.ordemacao === "nome") {
+            return a.nome.localeCompare(b.nome);
+        }
+        if (filtros.ordemacao === "periculosidade") {
+            return Number(b.periculosidade) - Number(a.periculosidade);
+        }
+        if (filtros.ordemacao === "mitologia") {
+            return a.mitologia.localeCompare(b.mitologia);
+        }
+        return 0;
+    });
+
     return (
         <div className="bestiario-container">
             <div className="header-container">
@@ -27,9 +71,9 @@ export default function Bestiario({ dados }: BestiarioProps) {
                 </div>
             </div>
             <div className="main-container">
-                <Filtro filtros setFiltros/>
+                <Filtro filtros={filtros} setFiltros={setFiltros} dados={dados.criaturas} />
                 <div className="cards-container">
-                    {dados.criaturas.map((criatura) => (
+                    {criaturasFiltradas.map((criatura) => (
                         <CardCriatura
                             key={criatura.nome}
                             criatura={criatura}
