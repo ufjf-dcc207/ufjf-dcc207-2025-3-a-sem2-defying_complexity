@@ -1,8 +1,33 @@
 .filtro-container{
-    background-color: antiquewhite;
-    max-height: 60vh;
-    margin-left: 4vw;
+    background-color: #85ba59;
     margin-top: 2vw;
-    padding: 4vw;
+    padding: 40px;
+    margin: 15px 15px 0px 15px;
     border-radius: 666px 666px 0px 0px;
+}
+
+.filtro-container h1{
+    color: #292c24fe;
+    margin-top: 25px;
+}
+
+.filtro-container h2{
+    color: #292c24fe;
+    margin-bottom: 10px;
+}
+
+
+.ordenacao-opcoes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.filtro-pesquisa{
+    width: 80%;
+    padding: 6px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
 }

@@ -1,13 +1,13 @@
 .card-container{
     display: flex;
-    width: 250px;
+    width: 245px;
     height: 380px;
     flex-direction: column;
     align-items: center;
-    background-color: #595959;
+    background-color: #595959bb;
     border-radius: 10px;
     padding: 10px;
-    border: #585858 2px solid;
+    border: #c4c4c46e 4px solid;
 }
 
 .card-container h3{
@@ -28,6 +28,13 @@
     margin-top: auto;
 }
 
+.card-descricao{
+    display: flex;
+    font-family: 'Arial', sans-serif!important;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 2px;
+}
 
 .card-imagem{
     width: 180px;

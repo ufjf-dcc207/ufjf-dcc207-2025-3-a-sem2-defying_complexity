@@ -10,12 +10,12 @@ export type BestiarioProps = {
 
 export default function Bestiario({ dados }: BestiarioProps) {
     const [filtros, setFiltros] = useState<{ // definição do tipo dos filtros
-        ordemacao: string;
+        ordenacao: string;
         periculosidade: number;
         mitologia: string[];
         pesquisa_texto: string;
     }>({ // estado inicial dos filtros
-        ordemacao: "nome",
+        ordenacao: "nome",
         periculosidade: 100,
         mitologia: [],
         pesquisa_texto: ""
@@ -47,13 +47,13 @@ export default function Bestiario({ dados }: BestiarioProps) {
 
         return true;
     }).sort((a, b) => {
-        if (filtros.ordemacao === "nome") {
+        if (filtros.ordenacao === "nome") {
             return a.nome.localeCompare(b.nome);
         }
-        if (filtros.ordemacao === "periculosidade") {
+        if (filtros.ordenacao === "periculosidade") {
             return Number(b.periculosidade) - Number(a.periculosidade);
         }
-        if (filtros.ordemacao === "mitologia") {
+        if (filtros.ordenacao === "mitologia") {
             return a.mitologia.localeCompare(b.mitologia);
         }
         return 0;

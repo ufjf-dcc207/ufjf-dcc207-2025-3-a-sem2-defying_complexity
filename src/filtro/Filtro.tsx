@@ -1,7 +1,7 @@
 import "./Filtro.css"
 
 type FiltroType = {
-    ordemacao: string;
+    ordenacao: string;
     periculosidade: number;
     mitologia: string[];
     pesquisa_texto: string;
@@ -47,7 +47,7 @@ export default function Filtro({ filtros, setFiltros, dados }: FiltroProps) {
     };
 
     const handleLimparFiltros = () => {
-        setFiltros({ ordemacao: "nome", periculosidade: 100, mitologia: [], pesquisa_texto: "" });
+        setFiltros({ ordenacao: "nome", periculosidade: 100, mitologia: [], pesquisa_texto: "" });
 
         const inputPesquisa = document.querySelector('input[type="text"]') as HTMLInputElement;
         if (inputPesquisa) {
@@ -74,7 +74,7 @@ export default function Filtro({ filtros, setFiltros, dados }: FiltroProps) {
     const handleRadioChangeOrdem = (e: React.ChangeEvent<HTMLInputElement>) => {
         setFiltros({
             ...filtros,
-            ordemacao: e.target.value
+            ordenacao: e.target.value
         });
     };
 
@@ -100,6 +100,7 @@ export default function Filtro({ filtros, setFiltros, dados }: FiltroProps) {
             <h2>Pesquisa</h2>
             <input
                 type="text"
+                className="filtro-pesquisa"
                 placeholder="Buscar por nome ou descrição"
                 onChange={(e) => { handleSearchChange(e) }}
             />
