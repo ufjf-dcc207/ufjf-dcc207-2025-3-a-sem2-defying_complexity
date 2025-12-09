@@ -1,0 +1,298 @@
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-batalha {
+    background: #282828;
+    border: 3px solid #85ba59;
+    border-radius: 15px;
+    padding: 30px;
+    max-width: 900px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+    box-shadow: 0 0 30px rgba(133, 186, 89, 0.3);
+}
+
+.modal-header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    border-bottom: 2px solid #85ba59;
+    padding-bottom: 15px;
+    position: relative;
+    width: 100%;
+}
+
+.modal-header h2 {
+    color: #85ba59;
+    font-size: 2em;
+    margin: 0;
+    text-shadow: none;
+    flex: 1;
+    text-align: center;
+}
+
+.btn-fechar {
+    background: transparent;
+    border: 2px solid #85ba59;
+    color: #85ba59;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    font-size: 1.5em;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.btn-fechar:hover {
+    background-color: #85ba59;
+    color: #282828;
+    transform: scale(1.1);
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.criaturas-selecionadas {
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.lado-esquerdo,
+.lado-direito {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-batalha-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+.card-batalha-wrapper .card-container {
+    border: 2px solid #85ba59;
+}
+
+.criatura-selecionada {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 20px;
+    background: rgba(133, 186, 89, 0.1);
+    border: 2px solid #85ba59;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.criatura-selecionada img {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #85ba59;
+}
+
+.criatura-selecionada h3 {
+    color: #a1c97e;
+    margin: 0;
+    font-size: 1.3em;
+    text-align: center;
+}
+
+.criatura-selecionada .periculosidade {
+    color: #85ba59;
+    font-weight: bold;
+    font-size: 1.1em;
+    margin: 0;
+}
+
+.btn-remover {
+    background-color: transparent;
+    border: 2px solid #ff4444;
+    color: #ff4444;
+    padding: 8px 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.btn-remover:hover {
+    background-color: #ff4444;
+    color: white;
+}
+
+.criatura-vazia {
+    width: 200px;
+    height: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px dashed #666;
+    border-radius: 10px;
+    background: rgba(0, 0, 0, 0.3);
+    color: #999;
+    text-align: center;
+}
+
+.versus {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5em;
+    font-weight: bold;
+    color: #85ba59;
+    text-shadow: none;
+    min-width: 80px;
+}
+
+.modal-footer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-batalha {
+    background: #85ba59;
+    color: #282828;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(133, 186, 89, 0.3);
+}
+
+.btn-batalha:hover:not(:disabled) {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(133, 186, 89, 0.5);
+}
+
+.btn-batalha:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.resultado-batalha {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+}
+
+.vencedor-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    padding: 30px;
+    background: rgba(133, 186, 89, 0.1);
+    border: 3px solid #85ba59;
+    border-radius: 15px;
+    width: 100%;
+}
+
+.titulo-vencedor {
+    color: #85ba59;
+    font-size: 1.8em;
+    margin: 0;
+    text-shadow: none;
+}
+
+.imagem-vencedor {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 3px solid #85ba59;
+    box-shadow: 0 0 20px rgba(133, 186, 89, 0.3);
+}
+
+.nome-vencedor {
+    color: #a1c97e;
+    font-size: 2em;
+    margin: 0;
+    text-shadow: none;
+}
+
+.periculosidade-vencedor,
+.mitologia-vencedor {
+    color: #bcd9a2;
+    font-size: 1.1em;
+    margin: 0;
+}
+
+.btn-nova-batalha {
+    background: #85ba59;
+    color: #282828;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(133, 186, 89, 0.3);
+}
+
+@media (max-width: 768px) {
+    .modal-batalha {
+        padding: 20px;
+        max-width: 95%;
+    }
+
+    .criaturas-selecionadas {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .versus {
+        transform: rotate(90deg);
+        margin: 10px 0;
+    }
+
+    .criatura-selecionada img,
+    .imagem-vencedor {
+        width: 120px;
+        height: 120px;
+    }
+
+    .modal-header h2 {
+        font-size: 1.5em;
+    }
+}

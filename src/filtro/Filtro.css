@@ -1,33 +1,249 @@
 .filtro-container{
-    background-color: #85ba59;
+    background-color: #282828;
     margin-top: 2vw;
-    padding: 40px;
+    padding: 30px;
     margin: 15px 15px 0px 15px;
-    border-radius: 666px 666px 0px 0px;
+    border-radius: 15px;
+    border: 2px solid #85ba59;
+    max-width: 280px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    height: fit-content;
 }
 
 .filtro-container h1{
-    color: #292c24fe;
-    margin-top: 25px;
+    color: #85ba59;
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-size: 2.5rem;
+    border-bottom: 2px solid #85ba59;
+    padding-bottom: 10px;
 }
 
 .filtro-container h2{
-    color: #292c24fe;
-    margin-bottom: 10px;
+    color: #a1c97e;
+    margin-top: 20px;
+    margin-bottom: 12px;
+    font-size: 1.8rem;
 }
-
 
 .ordenacao-opcoes {
     display: flex;
     flex-direction: column;
+    /* justify-content: flex-start; */
+    width: 100%;
+    gap: 12px;
+    margin-top: 12px;
+    font-size: 1.2rem;
+}
+
+.ordenacao-opcoes label {
+    display: flex;
+    align-items: start;
     gap: 10px;
-    margin-top: 15px;
+    color: #bcd9a2;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    padding: 8px;
+    border-radius: 6px;
+    font-size: 1.8rem;
+}
+
+.ordenacao-opcoes label:hover {
+    background-color: rgba(133, 186, 89, 0.1);
+    color: #a1c97e;
+}
+
+.ordenacao-opcoes input[type="radio"] {
+    cursor: pointer;
+    accent-color: #85ba59;
+    width: 18px;
+    height: 18px;
+    appearance: none;
+    -webkit-appearance: none;
+    border: 2px solid #85ba59;
+    border-radius: 50%;
+    background-color: transparent;
+    transition: all 0.2s ease;
+}
+
+.ordenacao-opcoes input[type="radio"]:checked {
+    background-color: #85ba59;
+    box-shadow: inset 0 0 0 4px #282828;
+}
+
+.ordenacao-opcoes input[type="radio"]:hover {
+    box-shadow: 0 0 8px rgba(133, 186, 89, 0.4);
 }
 
 .filtro-pesquisa{
-    width: 80%;
-    padding: 6px;
-    border-radius: 5px;
-    border: none;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 2px solid #85ba59;
+    background-color: #3f3f3f;
+    color: #a1c97e;
     font-size: 1rem;
+    margin-top: 8px;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.filtro-pesquisa:focus {
+    outline: none;
+    border-color: #a1c97e;
+    box-shadow: 0 0 12px rgba(133, 186, 89, 0.4);
+    background-color: #454545;
+}
+
+.filtro-pesquisa::placeholder {
+    color: #717171;
+}
+
+/* Checkboxes Mitologia */
+.filtro-container div {
+    display: flex;
+    /* align-items: center; */
+    gap: 12px;
+    color: #bcd9a2;
+    margin: 10px 0;
+    cursor: pointer;
+    padding: 8px;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    font-size: 1.2rem;
+}
+
+.filtro-container div:hover {
+    background-color: rgba(133, 186, 89, 0.15);
+    color: #a1c97e;
+}
+
+.filtro-container input[type="checkbox"] {
+    cursor: pointer;
+    accent-color: #85ba59;
+    width: 20px;
+    height: 20px;
+    appearance: none;
+    -webkit-appearance: none;
+    border: 2px solid #85ba59;
+    border-radius: 4px;
+    background-color: transparent;
+    transition: all 0.2s ease;
+}
+
+.filtro-container input[type="checkbox"]:checked {
+    background-color: #85ba59;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3E%3Cpath fill='%23282828' d='M13.854 3.646a.5.5 0 0 1 0 .708l-7 7a.5.5 0 0 1-.708 0l-3.5-3.5a.5.5 0 1 1 .708-.708L6.5 10.293l6.646-6.647a.5.5 0 0 1 .708 0z'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 14px;
+}
+
+.filtro-container input[type="checkbox"]:hover {
+    box-shadow: 0 0 8px rgba(133, 186, 89, 0.3);
+}
+
+.filtro-container label {
+    cursor: pointer;
+    font-size: 1.8rem;
+}
+
+/* Range Periculosidade */
+.filtro-container input[type="range"] {
+    width: 100%;
+    margin: 15px 0 8px 0;
+    height: 6px;
+    border-radius: 3px;
+    background: linear-gradient(to right, #3f3f3f 0%, #3f3f3f 100%);
+    outline: none;
+    -webkit-appearance: none;
+    appearance: none;
+}
+
+.filtro-container input[type="range"]::-webkit-slider-thumb {
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: #85ba59;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(133, 186, 89, 0.4);
+    border: 2px solid #282828;
+    transition: all 0.2s ease;
+}
+
+.filtro-container input[type="range"]::-webkit-slider-thumb:hover {
+    background-color: #a1c97e;
+    box-shadow: 0 4px 12px rgba(133, 186, 89, 0.5);
+}
+
+.filtro-container input[type="range"]::-moz-range-thumb {
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: #85ba59;
+    cursor: pointer;
+    border: 2px solid #282828;
+    box-shadow: 0 2px 8px rgba(133, 186, 89, 0.4);
+    transition: all 0.2s ease;
+}
+
+.filtro-container input[type="range"]::-moz-range-thumb:hover {
+    background-color: #a1c97e;
+    box-shadow: 0 4px 12px rgba(133, 186, 89, 0.5);
+}
+
+.filtro-container input[type="range"]::-moz-range-track {
+    background: transparent;
+    border: none;
+}
+
+.filtro-container span {
+    display: inline-block;
+    color: #a1c97e;
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-left: 8px;
+    background-color: rgba(133, 186, 89, 0.1);
+    padding: 4px 12px;
+    border-radius: 6px;
+}
+
+/* Botão Limpar */
+.filtro-container button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #85ba59;
+    color: #282828;
+    border: none;
+    border-radius: 6px;
+    font-size: 1.05rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.filtro-container button:hover {
+    background-color: #a1c97e;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(133, 186, 89, 0.3);
+}
+
+.filtro-container button:active {
+    transform: translateY(0);
+}
+
+@media (max-width: 768px) {
+    .filtro-container {
+        max-width: none;
+        padding: 20px;
+    }
+
+    .filtro-pesquisa {
+        width: 100%;
+    }
 }

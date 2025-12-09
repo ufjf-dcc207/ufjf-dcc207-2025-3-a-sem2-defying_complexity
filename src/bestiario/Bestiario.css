@@ -22,13 +22,11 @@ Bestiário - Cores
 
 .bestiario-container {
     display: flex;
-    width: 100vw;
+    width: 100%;
     height: auto;
-    min-height: 100%;
     flex-direction: column;
     align-items: center;
     background-color: #282828;
-    
 }
 
 .header-container {
@@ -46,18 +44,16 @@ Bestiário - Cores
     justify-content: center;
     gap: 20px;
     padding: 20px;
-    overflow-y: auto;
-    flex: 1;
-    height: auto;
-    max-width: 80vw;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .main-container {
     display: flex;
     flex-direction: row;
-    flex: 1;
     justify-content: space-between;
-    width: 100vw;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .gliphos {
@@ -82,4 +78,27 @@ Bestiário - Cores
     color: #bcd9a2;
     font-size: 1.5rem;
     margin: 10px 0px;
+}
+
+.btn-abrir-arena {
+    background: #85ba59;
+    color: #282828;
+    border: none;
+    padding: 15px 40px;
+    margin: 20px;
+    font-size: 1.1em;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    box-shadow: 0 5px 15px rgba(133, 186, 89, 0.3);
+    position: sticky;
+    bottom: 20px;
+    z-index: 500;
+}
+
+.btn-abrir-arena:active {
+    transform: translateY(0);
 }
